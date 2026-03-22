@@ -32,10 +32,33 @@ const Hero = () => (
           <Flame className="text-primary-container w-4 h-4" />
           <span className="text-xs font-bold tracking-widest text-[#C8C0CC] uppercase">MAIS DE 12.000 CASAIS JÁ TRANSFORMARAM SUA RELAÇÃO</span>
         </div>
-        <h1 className="text-3xl md:text-8xl font-headline italic font-bold leading-tight text-white text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-headline italic font-bold leading-tight text-white text-center">
           Chega de noites sem graça. Descubra o <span className="text-primary-container">Baralho da Ousadia.</span>
         </h1>
-        <p className="text-lg md:text-2xl text-[#C8C0CC] max-w-2xl leading-relaxed mx-auto text-center">
+        
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative w-full max-w-md mx-auto my-8"
+        >
+          <div className="absolute inset-0 bg-primary-container/20 blur-3xl rounded-full"></div>
+          <div className="relative z-10 aspect-video bg-black rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(255,0,0,0.3)] border border-white/10">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              className="w-full h-full object-cover"
+            >
+              <source src="https://storage.googleapis.com/msgs-assets/baralho-ousadia-video.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeos.
+            </video>
+          </div>
+        </motion.div>
+
+        <p className="text-base sm:text-lg md:text-xl text-[#C8C0CC] max-w-2xl leading-relaxed mx-auto text-center">
           160 desafios quentes e exclusivos desenhados para reacender a chama e criar momentos inesquecíveis entre quatro paredes.
         </p>
         <div className="flex flex-col space-y-4 pt-4 w-full max-w-md">
@@ -122,6 +145,28 @@ const Features = () => (
     <div className="max-w-4xl mx-auto px-6 text-center">
       <div className="space-y-10">
         <h2 className="text-5xl font-headline italic font-bold text-white">O que você vai receber</h2>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative max-w-2xl mx-auto my-12"
+        >
+          <div className="relative aspect-video bg-black rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(255,0,0,0.2)] border border-white/10">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              className="w-full h-full object-cover"
+            >
+              <source src="https://storage.googleapis.com/msgs-assets/baralho-ousadia-video.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeos.
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+          </div>
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { icon: <Sparkles />, title: '160 desafios exclusivos', desc: 'Do leve ao intenso, divididos por níveis.' },
@@ -412,7 +457,7 @@ const FAQ = () => {
 const FinalCTA = () => (
   <section className="py-32 relative overflow-hidden bg-gradient-to-tr from-primary-container via-[#ff0000] to-[#000000]">
     <div className="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-10">
-      <h2 className="text-5xl md:text-7xl font-headline italic font-bold text-white leading-tight">
+      <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline italic font-bold text-white leading-tight">
         Dê o próximo passo em sua relação hoje.
       </h2>
       <p className="text-xl text-white/90 font-medium">Não deixe para amanhã a conexão que vocês podem viver hoje.</p>
