@@ -41,20 +41,16 @@ const Hero = () => (
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative w-full max-w-md mx-auto my-8"
+          className="relative w-full mx-auto my-8 px-4 flex justify-center"
         >
-          <div className="absolute inset-0 bg-primary-container/20 blur-3xl rounded-full"></div>
-          <div className="relative z-10 aspect-video bg-black rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(255,0,0,0.3)] border border-white/10">
-            <video 
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
-              className="w-full h-full object-cover"
-            >
-              <source src="https://storage.googleapis.com/msgs-assets/baralho-ousadia-video.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeos.
-            </video>
+          <div className="absolute inset-0 bg-primary-container/10 blur-3xl rounded-full scale-110"></div>
+          <div className="relative z-10">
+            <img 
+              src="https://i.postimg.cc/GtL6wqFz/Mockups.png" 
+              alt="Mockup Baralho da Ousadia"
+              className="w-full max-w-[600px] h-auto object-contain block mx-auto"
+              referrerPolicy="no-referrer"
+            />
           </div>
         </motion.div>
 
@@ -152,18 +148,15 @@ const Features = () => (
           viewport={{ once: true }}
           className="relative max-w-2xl mx-auto my-12"
         >
-          <div className="relative aspect-video bg-black rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(255,0,0,0.2)] border border-white/10">
+          <div className="relative rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(255,0,0,0.2)] bg-black">
             <video 
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
-              className="w-full h-full object-cover"
-            >
-              <source src="https://storage.googleapis.com/msgs-assets/baralho-ousadia-video.mp4" type="video/mp4" />
-              Seu navegador não suporta vídeos.
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+              src="https://files.catbox.moe/tnhjgy.mp4" 
+              className="w-full h-auto object-contain"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
           </div>
         </motion.div>
 
